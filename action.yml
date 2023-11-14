@@ -1,0 +1,16 @@
+name: AWS parameter store Github Action
+description: GithubAction to store secrets in AWS parameter store
+author: afarid
+branding:
+  icon: anchor
+  color: gray-dark
+inputs:
+  app:
+    description: app name which you want to retrieve parameters for. (required)
+    required: true
+  environment:
+    description: environment name which you want to retrieve parameters for. (required)
+    required: true
+runs:
+  using: docker
+  image: docker://ghcr.io/afarid/github-action-ssm
